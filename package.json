@@ -1,0 +1,32 @@
+{
+  "name": "bot_sin_mas",
+  "version": "1.0.0",
+  "description": "Developing a bot for my own server",
+  "main": "./prod/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node -r dotenv/config ./prod/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebasinmas/testBots.git"
+  },
+  "author": "SebaSinMas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sebasinmas/testBots/issues"
+  },
+  "homepage": "https://github.com/sebasinmas/testBots#readme",
+  "dependencies": {
+    "@discordjs/builders": "^1.3.0",
+    "@discordjs/rest": "^1.3.0",
+    "discord-api-types": "^0.37.12",
+    "discord.js": "^13.12.0",
+    "dotenv": "^16.0.3",
+    "mongoose": "^6.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.8.5",
+    "typescript": "^4.8.4"
+  }
+}
