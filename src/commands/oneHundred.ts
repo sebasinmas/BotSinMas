@@ -12,7 +12,7 @@ export const oneHundred: Command = {
         .addStringOption((option) =>
             option
                 .setName("message")
-                .setDescription("The message you want to send")
+                .setDescription("El mensaje que quieres enviar")
                 .setRequired(true)
         ),
     run: async (interaction) => {
@@ -29,6 +29,21 @@ export const oneHundred: Command = {
             name: user.tag,
             iconURL: user.displayAvatarURL(),
         });
+        
+        oneHundedEmbed.addFields([
+            {
+                name: 'round',
+                value: updateCamper.round.toString(),
+                inline: true
+            },
+            {
+                name: 'Day',
+                value: updateCamper.day.toString(),
+                inline: true
+            }
+        ]);
+
+        
         oneHundedEmbed.setFooter({
             text:
             `day completed: ${new Date(updateCamper.timestamp).toLocaleDateString()}`,
